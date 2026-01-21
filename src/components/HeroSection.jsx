@@ -40,7 +40,7 @@ export default function HeroSection() {
 
   const fetchStats = async () => {
     try {
-      const response = await fetch('http://localhost:8000/stats');
+      const response = await fetch('https://ai-portfolio-backend-5d0q.onrender.com/stats');
       const data = await response.json();
 
       // Animate numbers counting up

@@ -33,7 +33,7 @@ export default function ChatWidget() {
 
   const createNewSession = async () => {
     try {
-      const response = await fetch('http://localhost:8000/session/new', {
+      const response = await fetch('https://ai-portfolio-backend-5d0q.onrender.com/session/new', {
         method: 'POST',
       });
       const data = await response.json();
@@ -46,7 +46,7 @@ export default function ChatWidget() {
 
   const loadHistory = async (sid) => {
     try {
-      const response = await fetch(`http://localhost:8000/session/${sid}`);
+      const response = await fetch(`https://ai-portfolio-backend-5d0q.onrender.com/session/${sid}`);
       const data = await response.json();
       if (data.history && data.history.length > 0) {
         setMessages([
@@ -73,7 +73,7 @@ export default function ChatWidget() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/ask', {
+      const response = await fetch('https://ai-portfolio-backend-5d0q.onrender.com/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
