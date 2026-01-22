@@ -2,6 +2,7 @@ import Image from "next/image";
 import HeroSection from '../components/HeroSection.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
 import Link from 'next/link';
+export const runtime = 'edge';
 
 
 
