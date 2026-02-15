@@ -4,27 +4,22 @@ import ProjectCard from '../components/ProjectCard.jsx';
 import Link from 'next/link';
 export const runtime = 'edge';
 
-
-
 export default function Home() {
   return (
     <main>
       {/* NEW ANIMATED HERO */}
       <HeroSection />
 
-
       {/* ABOUT - REWRITTEN FOR SAFETY FOCUS */}
       <section id="about" className="bg-gray-50 py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">About / Research Philosophy</h2>
-
 
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             I focus on applied AI safety — how models behave in real systems, how datasets shape outcomes, 
             and how deployment context introduces risk. My work centers on evaluation, interpretability, 
             and low-resource NLP, where safety issues often appear earlier and more visibly.
           </p>
-
 
           <p className="text-lg text-gray-700 leading-relaxed">
             Rather than optimizing for scale or performance alone, I prioritize transparency, robustness, 
@@ -33,8 +28,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
-
 
       {/* PROJECTS - 7 PROJECTS IN MARKET-IMPORTANCE ORDER */}
       <section id="projects" className="py-20 bg-gradient-to-b from-slate-900 to-gray-900">
@@ -48,31 +41,29 @@ export default function Home() {
             </p>
           </div>
 
-
-
           <div className="space-y-8">
-            {/* Project 1: Red-teaming LLMs */}
-            <Link href="/projects/red-teaming" className="block group">
+            {/* Project 1: LSR Dashboard - UPDATED */}
+            <Link href="/projects/lsr-dashboard" className="block group">
               <ProjectCard
                 icon="🛡️"
-                title="Red-Teaming LLMs for AI Safety"
-                tagline="Automated adversarial testing to identify vulnerabilities in large language models"
-                description="Systematic red-teaming framework for evaluating LLM robustness against prompt injection, jailbreaks, and unsafe outputs. Implements multiple attack strategies with automated safety scoring."
+                title="LSR Dashboard: Linguistic Safety & Robustness Workbench"
+                tagline="Empirical red-teaming and safety-decay analysis across low-resource African languages"
+                description="Production workbench for systematically detecting safety decay in frontier LLMs (Gemini, GPT-4, Claude) when prompted in Yoruba, Hausa, Igbo, and Igala. Features dual-probe comparison, mechanistic visualization, and session analytics for demonstrating 2-4x higher bypass rates in low-resource contexts."
                 metrics={[
-                  'Tests 5+ vulnerability categories (injection, bias, toxicity)',
-                  'Automated attack generation and evaluation',
-                  'Comprehensive safety scoring framework',
-                  'Production-ready testing pipeline',
+                  'Side-by-side English baseline vs target language analysis',
+                  'Automatic loophole detection with session statistics',
+                  '18 attack vectors across 4 African languages',
+                  'Mechanistic visualizations: activation smearing & centroid drift',
+                  'Exportable JSON logs for offline analysis',
+                  'Google Translate verification integration'
                 ]}
-                techStack={['Python', 'Transformers', 'Streamlit', 'OpenAI', 'Safety Metrics']}
-                liveUrl="https://huggingface.co/spaces/Faruna01/red-teaming-llms"
-                githubUrl="https://github.com/farunawebservices/llm-red-teaming-framework"
-                images={['/images/red-teaming-dashboard.png']}
+                techStack={['Streamlit', 'Plotly', 'Google Gemini API', 'Python', 'Pandas', 'NumPy']}
+                liveUrl="https://huggingface.co/spaces/farunawebservices/lsr-dashboard"
+                githubUrl="https://github.com/farunawebservices/lsr-dashboard"
+                images={['/images/lsr-dashboard.png']}
                 color="red"
               />
             </Link>
-
-
 
             {/* Project 2: Neural Machine Translation */}
             <Link href="/projects/neural-translation" className="block group">
@@ -95,8 +86,6 @@ export default function Home() {
               />
             </Link>
 
-
-
             {/* Project 3: Mechanistic Interpretability */}
             <Link href="/projects/interpretability" className="block group">
               <ProjectCard
@@ -117,8 +106,6 @@ export default function Home() {
                 color="blue"
               />
             </Link>
-
-
 
             {/* Project 4: Igala GPT from Scratch */}
             <Link href="/projects/igala-gpt" className="block group">
@@ -141,8 +128,6 @@ export default function Home() {
               />
             </Link>
 
-
-
             {/* Project 5: Igala Dataset Explorer */}
             <Link href="/projects/igala-dataset" className="block group">
               <ProjectCard
@@ -164,8 +149,6 @@ export default function Home() {
               />
             </Link>
 
-
-
             {/* Project 6: AI Safety & Calibration */}
             <Link href="/projects/ai-safety" className="block group">
               <ProjectCard
@@ -185,8 +168,6 @@ export default function Home() {
                 color="orange"
               />
             </Link>
-
-
 
             {/* Project 7: Chat Assistant */}
             <Link href="/projects/chat-assistant" className="block group">
@@ -211,9 +192,7 @@ export default function Home() {
         </div>
       </section>
 
-
-
-      {/* CASE STUDIES - 4 MAIN PROJECTS */}
+      {/* CASE STUDIES - 4 MAIN PROJECTS - UPDATED */}
       <section id="case-studies" className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -223,9 +202,9 @@ export default function Home() {
             Deep dives into architecture, challenges, and solutions
           </p>
           <div className="grid md:grid-cols-4 gap-6 mt-12">
-            <Link href="/projects/red-teaming" className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all cursor-pointer group">
+            <Link href="/projects/lsr-dashboard" className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all cursor-pointer group">
               <div className="text-4xl mb-3">🛡️</div>
-              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-red-400 transition-colors">Red-Teaming</h3>
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-red-400 transition-colors">LSR Dashboard</h3>
               <p className="text-gray-400 text-sm">View case study →</p>
             </Link>
             <Link href="/projects/neural-translation" className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all cursor-pointer group">
@@ -246,8 +225,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
 
       {/* BLOG Section - RENAMED TO "SAFETY & EVALUATION WRITING" */}
       <section id="blog" className="py-20 bg-gray-50">
@@ -273,8 +250,6 @@ export default function Home() {
               <span className="text-xs text-blue-600 font-medium">Read article →</span>
             </Link>
 
-
-
             <Link
               href="/blog/low-resource-nlp"
               className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all cursor-pointer group"
@@ -288,8 +263,6 @@ export default function Home() {
               </p>
               <span className="text-xs text-blue-600 font-medium">Read article →</span>
             </Link>
-
-
 
             <Link
               href="/blog/cloud-run-deployment"
@@ -308,8 +281,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* PROJECT VISION */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -317,8 +288,6 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Project Vision</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
           </div>
-
-
 
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-12">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -328,8 +297,6 @@ export default function Home() {
               languages, and avoid overconfident or unsafe recommendations.
             </p>
 
-
-
             <p className="text-lg text-gray-700 leading-relaxed">
               I'm especially interested in deploying AI where <span className="font-semibold text-gray-900">access to expertise
               is limited</span>, and where responsible design can make a meaningful
@@ -337,8 +304,6 @@ export default function Home() {
               making models more interpretable, or designing systems that know when to
               abstain—I believe AI should serve communities, not replace human judgment.
             </p>
-
-
 
             <div className="mt-8 pt-6 border-t border-gray-200">
               <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -363,8 +328,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* CONTACT - UPDATED GITHUB LINK */}
       <section id="contact" className="bg-gradient-to-b from-gray-50 to-slate-900 py-20">
         <div className="max-w-4xl mx-auto px-6">
@@ -379,8 +342,6 @@ export default function Home() {
               </p>
             </div>
 
-
-
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
               <a 
                 href="https://github.com/farunawebservices" 
@@ -394,8 +355,6 @@ export default function Home() {
                 <span className="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">GitHub</span>
               </a>
 
-
-
               <a 
                 href="https://huggingface.co/Faruna01" 
                 target="_blank" 
@@ -405,8 +364,6 @@ export default function Home() {
                 <div className="text-3xl">🤗</div>
                 <span className="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">Hugging Face</span>
               </a>
-
-
 
               <a 
                 href="https://www.linkedin.com/in/faruna-godwin-abuh-07a22213b/" 
@@ -420,8 +377,6 @@ export default function Home() {
                 <span className="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">LinkedIn</span>
               </a>
 
-
-
               <a 
                 href="mailto:farunagodwin01@gmail.com" 
                 className="flex flex-col items-center gap-3 p-6 bg-slate-700/50 hover:bg-slate-700 rounded-xl border border-slate-600 hover:border-slate-500 transition-all group"
@@ -433,8 +388,6 @@ export default function Home() {
               </a>
             </div>
 
-
-
             <div className="mt-10 pt-8 border-t border-slate-700 text-center">
               <p className="text-slate-400 text-sm">
                 💡 <span className="font-semibold">Currently exploring:</span> Selective prediction methods, 
@@ -445,8 +398,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* FOOTER - UPDATED TITLE */}
       <footer className="bg-slate-950 border-t border-slate-800 py-8">
         <div className="max-w-6xl mx-auto px-6">
@@ -454,7 +405,6 @@ export default function Home() {
             <div className="text-slate-400 text-sm">
               © {new Date().getFullYear()} <span className="font-semibold text-slate-300">Godwin Faruna Abuh</span> · Applied AI Safety Engineer
             </div>
-
 
             <div className="flex items-center gap-4 text-xs text-slate-500">
               <span className="flex items-center gap-2">
@@ -466,8 +416,6 @@ export default function Home() {
             </div>
           </div>
 
-
-
           <div className="mt-6 pt-6 border-t border-slate-800 text-center">
             <p className="text-xs text-slate-500">
               Interested in how this portfolio was built? Check out the 
@@ -478,8 +426,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-
 
     </main>
   );
