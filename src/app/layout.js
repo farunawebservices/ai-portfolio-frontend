@@ -1,6 +1,7 @@
 import ChatWidget from '../components/ChatWidget.jsx';
 import Navigation from '../components/Navigation.jsx';
 import './globals.css';
+export const runtime = 'edge';
 
 export const metadata = {
   title: 'Godwin Portfolio',
