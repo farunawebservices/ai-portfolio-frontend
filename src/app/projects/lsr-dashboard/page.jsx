@@ -42,9 +42,7 @@ export default function LSRDashboardCaseStudy() {
 
             <div className="flex flex-wrap gap-4 mb-8">
               <a
-                <a
-              href="https://huggingface.co/spaces/Faruna01/lsr-dashboard"
-  target="_blank"
+                href="https://huggingface.co/spaces/Faruna01/lsr-dashboard"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-red-500/50 transition-all"
@@ -385,9 +383,8 @@ export default function LSRDashboardCaseStudy() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              <a
-          href="https://huggingface.co/spaces/Faruna01/lsr-dashboard"
-            target="_blank"
+              href="https://huggingface.co/spaces/Faruna01/lsr-dashboard"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-red-500/50 transition-all"
             >
