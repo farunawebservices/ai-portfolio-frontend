@@ -58,7 +58,7 @@ export default function Home() {
                   'Google Translate verification integration'
                 ]}
                 techStack={['Streamlit', 'Plotly', 'Google Gemini API', 'Python', 'Pandas', 'NumPy']}
-                liveUrl="https://huggingface.co/spaces/farunawebservices/lsr-dashboard"
+                liveUrl="https://huggingface.co/spaces/Faruna01/lsr-dashboard"
                 githubUrl="https://github.com/farunawebservices/lsr-dashboard"
                 images={['/images/lsr-dashboard.png']}
                 color="red"
